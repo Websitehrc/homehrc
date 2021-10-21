@@ -5,9 +5,12 @@
   =
     <link rel="stylesheet" href="C:\Users\DELL\Videos\Website college\web\css\all.min.css">
     <link rel="stylesheet" href="css\all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  
    
     <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shi.css">
+    
    
   
 
@@ -392,5 +395,119 @@
 
     </table>
 </div>
+<br><br>
+      <p style="margin-top: -15%;position: relative;" > 
+        <h2 class="clr" style ="border:2px solid Tomato;">Slideshow Gallery</h2>
+        
+        <div class="container">
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img id="img" src="hostel.jpg" class="center1">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img id="img"  src="pa.jpg" class="center1">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img id="img" src="clg3.jpg" class="center1">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img id="img" src="clg2.jpg" class="center1">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img id="img" src="clg.jpg" class="center1">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img id="img"  src="nss.jpg" class="center1">
+          </div>
+        
+          <a id="aa" class="prev" onclick="plusSlides(-1)">❮</a>
+          <a id="aa" class="next" onclick="plusSlides(1)">❯</a>
+        
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+        
+          <div class="row">
+            <div class="column">
+              <img id="img"  class="demo cursor" src="hostel.jpg" 
+              style="width:100%"  onclick="currentSlide(1)" alt="Hostel">
+            </div>
+            <div class="column">
+              <img  id="img" class="demo cursor" src="pa.jpg"
+               style="width:100%" onclick="currentSlide(2)" alt="Hindi Divas">
+            </div>
+            <div class="column">
+              <img id="img" class="demo cursor" src="clg3.jpg"
+               style="width:100%" onclick="currentSlide(3)" alt="ELECTION">
+            </div>
+            <div class="column">
+              <img id="img" class="demo cursor" src="clg2.jpg" 
+              style="width:100%" onclick="currentSlide(4)" alt="CULTURAL">
+            </div>
+            <div class="column">
+              <img id="img" class="demo cursor" src="clg.jpg" 
+              style="width:100%" onclick="currentSlide(5)" alt="FEST">
+            </div>
+            <div class="column">
+              <img id="img" class="demo cursor" src="nss.jpg" 
+              style="width:100%" onclick="currentSlide(6)" alt="NSS">
+            </div>
+          </div>
+        </div>
+        
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+        <nav class="nav">
+           <div class ="nav-mobile">
+             <ul class="left" style="margin-left: 5%;list-style-type:none;" >
+               <li><a id="aa" href ="#"><i class="fa fa-home"></i>Home</a></li>
+               <li><a id="aa" href="#"><i class="fa fa-book"></i>Categories</a></li>
+               <li><a id="aa" href="#"><i class="fa fa-fire"></i>Popular</a></li>
+               <li><a id="aa" href="#"><i class="fa fa-user"></i>About</a></li>
+               <li><a id="aa" href="#"><i class="fa fa-envelope"></i>Contact</a></li>
+               <li><a id="aa" href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+             </ul>
+           </div>
+        </nav>
+        </p>
+    
 </body>
 </html>
